@@ -67,10 +67,11 @@ if [ -f "com.google.android.youtube.apk" ]
 then
     echo "Building Root APK"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar --install \
-                               -e microg-support \
+                               -e custom-branding -e microg-support \
                                -a com.google.android.youtube.apk -o build/revanced-root.apk
     echo "Building Non-root APK"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar --install \
+                               -e custom-branding \
                                -a com.google.android.youtube.apk -o build/revanced-nonroot.apk
 else
     echo "Cannot find YouTube APK, skipping build"
@@ -83,10 +84,11 @@ if [ -f "com.google.android.apps.youtube.music.apk" ]
 then
     echo "Building Root APK"
     java -jar revanced-cli.jar -b revanced-patches.jar --install \
-                               -e microg-support \
+                               -e custom-branding -e microg-support \
                                -a com.google.android.apps.youtube.music.apk -o build/revanced-music-root.apk
     echo "Building Non-root APK"
     java -jar revanced-cli.jar -b revanced-patches.jar --install \
+                               -e custom-branding \
                                -a com.google.android.apps.youtube.music.apk -o build/revanced-music-nonroot.apk
 else
     echo "Cannot find YouTube Music APK, skipping build"
