@@ -41,7 +41,10 @@ jobs:
           keyPassword: '${{ secrets.KEY_PASSWORD }}'
         env:
           BUILD_TOOLS_VERSION: "30.0.2"     
-          
+
+      - name: Create Magisk module
+        run: ./create-module.sh
+
       - name: Generate SHA256 checksums for the signed APK files
         run: ./generate-SHA256sum.sh
       
@@ -51,6 +54,8 @@ jobs:
           automatic_release_tag: "latest"
           title: "Release ${{ env.date_now }}"
           files: |
-            build/SHA-256.txt
-            build/*signed*.apk
+            ReVanced-v17.24.34-MagiskModule.zip
+            build/revanced-nonroot-signed.apk
             vanced-microG.apk
+            build/apk-SHA-256.txt
+            build/MagiskModule-SHA-256.txt
