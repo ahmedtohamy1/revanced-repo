@@ -51,7 +51,7 @@ jobs:
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "17.25.34"
+          automatic_release_tag: "17.25.69"
           title: "Release ${{ env.date_now }}"
           files: |
             ReVanced-v17.25.34-MagiskModule.zip
