@@ -49,7 +49,7 @@ mkdir -p build
 # All patches will be included by default, you can exclude patches by appending -e patch-name to exclude said patch.
 # Example: -e microg-support
 
-# All available patches obtained from: revanced-patches-2.9.1
+# All available patches obtained from: revanced-patches-2.9.2
 
 # seekbar-tapping: Enable tapping on the seekbar of the YouTube player. 
 # general-ads: Patch to remove general ads in bytecode. 
