@@ -2,11 +2,11 @@
 
 # Latest compatible version of apks
 # YouTube Music 5.03.50
-# YouTube 17.25.34
+# YouTube 17.26.35
 # Vanced microG 0.2.24.220220
 
 YTM_VERSION="5.03.50"
-YT_VERSION="17.25.34"
+YT_VERSION="17.26.35"
 VMG_VERSION="0.2.24.220220"
 
 # Artifacts associative array aka dictionary
@@ -49,7 +49,7 @@ mkdir -p build
 # All patches will be included by default, you can exclude patches by appending -e patch-name to exclude said patch.
 # Example: -e microg-support
 
-# All available patches obtained from: revanced-patches-2.9.2
+# All available patches obtained from: revanced-patches-2.12.0
 
 # seekbar-tapping: Enable tapping on the seekbar of the YouTube player. 
 # general-ads: Patch to remove general ads in bytecode. 
