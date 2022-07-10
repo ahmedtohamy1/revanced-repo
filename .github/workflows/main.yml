@@ -30,18 +30,6 @@ jobs:
       - name: Set current date as env variable
         run: echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - uses: r0adkll/sign-android-release@v1
-        name: Sign APK's
-        with:
-          releaseDirectory: build
-          signingKeyBase64: '${{ secrets.SIGNING_KEY }}'
-          output: build/release/signed
-          alias: '${{ secrets.ALIAS }}'
-          keyStorePassword: '${{ secrets.KEY_STORE_PASSWORD }}'
-          keyPassword: '${{ secrets.KEY_PASSWORD }}'
-        env:
-          BUILD_TOOLS_VERSION: "30.0.2"     
-
       - name: Create Magisk module
         run: ./create-module.sh
 
@@ -55,7 +43,7 @@ jobs:
           title: "Release ${{ env.date_now }}"
           files: |
             ReVanced-v17.26.35-MagiskModule.zip
-            build/revanced-nonroot-signed.apk
+            build/*.apk
             vanced-microG.apk
             build/apk-SHA-256.txt
             build/MagiskModule-SHA-256.txt
